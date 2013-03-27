@@ -24,8 +24,8 @@ public class JsonToJava {
 			log.error("Error accessing the server for some reason", e);
 		}
 
-		Person person = new Gson().fromJson(json, Person.class);
-		log.info(person.toString());
+		Person person = new Gson().fromJson(json, Person.class);		
+		if(person != null) log.info(person.toString());
 
 	}
 
