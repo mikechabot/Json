@@ -7,9 +7,9 @@ public class Person {
 	
 	private String firstName;
 	private String lastName;
-	private String[] phoneNumber;
-	private Map<String, String> phoneNumberMap;
-	private Map<String, Map<String,String>> personnelContact;
+	private Object[] phoneNumber;
+	private Map<String, Object[]> phoneNumberMap;
+	private Map<String, Map<String,Object[]>> personnelContact;
 	
 	public String getFirstName() {
 		return firstName;
@@ -20,26 +20,26 @@ public class Person {
 	public String getLastName() {
 		return lastName;
 	}
-	public Map<String, Map<String, String>> getPersonnelContact() {
+	public Map<String, Map<String, Object[]>> getPersonnelContact() {
 		return personnelContact;
 	}
-	public void setPersonnelContact(Map<String, Map<String, String>> personnelContact) {
+	public void setPersonnelContact(Map<String, Map<String, Object[]>> personnelContact) {
 		this.personnelContact = personnelContact;
 	}
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public String[] getPhoneNumber() {
+	public Object[] getPhoneNumber() {
 		return phoneNumber;
 	}
-	public void setPhoneNumber(String[] phoneNumber) {
+	public void setPhoneNumber(Object[] phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 	
-	public Map<String, String> getPhoneNumberMap() {
+	public Map<String, Object[]> getPhoneNumberMap() {
 		return phoneNumberMap;
 	}
-	public void setPhoneNumberMap(Map<String, String> phoneNumberMap) {
+	public void setPhoneNumberMap(Map<String, Object[]> phoneNumberMap) {
 		this.phoneNumberMap = phoneNumberMap;
 	}
 	

@@ -14,20 +14,18 @@ public class JavaToJson {
 	
 	public static void main(String[] args) {
 
-		Map<String,Map<String,String>> personnelContact = new HashMap<String,Map<String,String>>();	
+		Map<String,Map<String,Object[]>> personnelContact = new HashMap<String,Map<String,Object[]>>();	
+		Map<String, Object[]> namesMap = new HashMap<String,Object[]>(); 	// will be null, meant to be null
+		Map<String, Object[]> phonesMap = new HashMap<String,Object[]>();
 		
-		Person person = new Person();		
-		String[] phonesArray = {"774-266-0686","781-373-6439"};
+		Object[] phonesArray = {"Mobile",7742660686L,"Work",7813736439L};
 		
-		Map<String, String> namesMap = new HashMap<String,String>();
-		Map<String, String> phonesMap = new HashMap<String,String>();
-						
-		phonesMap.put("Mobile", "774-266-0686");
-		phonesMap.put("Work", "781-373-6439");
-		
+		phonesMap.put("Phone Numbers", phonesArray);
+	
 		personnelContact.put("Names",namesMap);
 		personnelContact.put("Phones",phonesMap);
 		
+		Person person = new Person();
 		person.setPhoneNumber(phonesArray);
 		person.setPhoneNumberMap(phonesMap);
 		person.setFirstName("Mike");
